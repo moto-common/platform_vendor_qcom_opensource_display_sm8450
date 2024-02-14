@@ -26,8 +26,8 @@ cc_library_shared {
     ],
     header_libs: [
         "display_headers",
-        "qti_kernel_headers",
-        "qti_display_kernel_headers",
+        "device_kernel_headers",
+        "display_headers",
         "device_kernel_headers",
     ],
 
@@ -35,11 +35,9 @@ cc_library_shared {
         "-DLOG_TAG=\"SDM-histogram\"",
         "-Wall",
         "-std=c++14",
-        "-Werror",
         "-fno-operator-names",
         "-Wthread-safety",
     ],
-    clang: true,
     srcs: [
         "histogram_collector.cpp",
         "ringbuffer.cpp",
@@ -61,8 +59,8 @@ cc_binary {
     ],
     header_libs: [
         "display_headers",
-        "qti_kernel_headers",
-        "qti_display_kernel_headers",
+        "device_kernel_headers",
+        "display_headers",
         "device_kernel_headers",
     ],
 
@@ -70,11 +68,9 @@ cc_binary {
         "-DLOG_TAG=\"SDM-histogram\"",
         "-Wall",
         "-std=c++14",
-        "-Werror",
         "-fno-operator-names",
         "-Wthread-safety",
     ],
-    clang: true,
 
     vendor: true,
 
@@ -98,8 +94,8 @@ cc_binary {
     ],
     header_libs: [
         "display_headers",
-        "qti_kernel_headers",
-        "qti_display_kernel_headers",
+        "device_kernel_headers",
+        "display_headers",
         "device_kernel_headers",
     ],
 
@@ -107,11 +103,9 @@ cc_binary {
         "-DLOG_TAG=\"SDM-histogram\"",
         "-Wall",
         "-std=c++14",
-        "-Werror",
         "-fno-operator-names",
         "-Wthread-safety",
     ],
-    clang: true,
 
     vendor: true,
 

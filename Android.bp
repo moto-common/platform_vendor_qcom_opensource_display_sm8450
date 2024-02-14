@@ -74,14 +74,12 @@ qtidisplay_cc_defaults {
     cflags: [
         "-Wno-missing-field-initializers",
         "-Wall",
-        "-Werror",
     ],
     shared_libs: [
         "liblog",
         "libcutils",
         "libutils",
     ],
-    clang: true,
     soong_config_variables: {
         drmpp: {
             cflags: ["-DPP_DRM_ENABLE"],
@@ -112,7 +110,7 @@ qtidisplay_cc_defaults {
     defaults: ["qtidisplay_common_defaults"],
     soong_config_variables: {
         default: {
-            header_libs: ["display_headers", "qti_kernel_headers"],
+            header_libs: ["display_headers", "device_kernel_headers"],
         },
         headless: {
             header_libs: ["display_headers"],
@@ -184,6 +182,7 @@ subdirs = [
     "libqdutils",
     "libddebug",
     "libdrmutils",
+    "libmemtrack",
     "libhistogram",
     "liblight",
     "composer",

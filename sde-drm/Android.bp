@@ -13,19 +13,17 @@ cc_library_shared {
     ],
     header_libs: [
         "display_headers",
-        "qti_kernel_headers",
-        "qti_display_kernel_headers",
+        "device_kernel_headers",
+        "display_headers",
         "device_kernel_headers",
     ],
     cflags: [
         "-Wno-missing-field-initializers",
         "-Wall",
-        "-Werror",
         "-fno-operator-names",
         "-Wno-unused-parameter",
         "-DLOG_TAG=\"SDE_DRM\"",
     ],
-    clang: true,
     srcs: [
         "drm_manager.cpp",
         "drm_connector.cpp",

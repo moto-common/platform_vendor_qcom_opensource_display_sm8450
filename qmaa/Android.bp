@@ -1,7 +1,7 @@
 soong_namespace {
     imports: [
-        "hardware/qcom/display",
-        "hardware/qcom/display/libdebug",
+        "vendor/qcom/opensource/display/sm8450",
+        "vendor/qcom/opensource/display/sm8450/libdebug",
     ],
 }
 composer_srcs = ["*.cpp"]
@@ -17,8 +17,8 @@ cc_binary {
     relative_install_path: "hw",
     header_libs: [
         "display_headers",
-        "qti_kernel_headers",
-        "qti_display_kernel_headers",
+        "device_kernel_headers",
+        "display_headers",
         "device_kernel_headers",
     ],
 
@@ -27,7 +27,6 @@ cc_binary {
         "-Wno-unused-parameter",
         "-DLOG_TAG=\"SDM\"",
     ],
-    clang: true,
 
     shared_libs: [
         "libbinder",

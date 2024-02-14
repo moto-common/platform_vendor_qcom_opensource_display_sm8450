@@ -1,4 +1,4 @@
-HEADER_PATH := ${WORKSPACE}/hardware/qcom/display/libdrmutils
+HEADER_PATH := ${WORKSPACE}/vendor/qcom/opensource/display/sm8450/libdrmutils
 
 cpp_sources = drm_lib_loader.cpp \
               drm_master.cpp \
